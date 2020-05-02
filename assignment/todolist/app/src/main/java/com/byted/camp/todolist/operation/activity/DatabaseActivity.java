@@ -85,9 +85,9 @@ public class DatabaseActivity extends AppCompatActivity implements View.OnClickL
 
         // Create a new map of values, where column names are the keys
         ContentValues values = new ContentValues();
+
         values.put(FeedEntry.COLUMN_NAME_TITLE, "my_title");
         values.put(FeedEntry.COLUMN_NAME_SUBTITLE, "my_subtitle");
-
         // Insert the new row, returning the primary key value of the new row
         long newRowId = db.insert(FeedEntry.TABLE_NAME, null, values);
         Log.i(TAG, "perform add data, result:" + newRowId);

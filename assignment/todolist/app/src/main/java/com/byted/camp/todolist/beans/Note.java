@@ -14,9 +14,13 @@ public class Note {
     private State state;
     private String content;
 
+
     public Note(long id) {
         this.id = id;
     }
+
+
+
 
     public Date getDate() {
         return date;

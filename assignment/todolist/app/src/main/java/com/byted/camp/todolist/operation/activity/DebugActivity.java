@@ -71,7 +71,10 @@ public class DebugActivity extends AppCompatActivity {
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
-                        File dir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
+//                        File dir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
+                        File dir = getFilesDir();
+//                        File dir=getCacheDir();
+//                        File dir=getExternalFilesDir(null);
                         File file = new File(dir, "test");
                         FileUtils.writeContentToFile(file, "#title \ntest content.");
                         final List<String> contents = FileUtils.readContentFromFile(file);
